@@ -12,7 +12,7 @@ export function useSahreContext(){
 */
 
 export default function ShareContextProvider({children}){
-    const [shareObj,setShareObj] = useState({loginUser: '', basicAuthUser:'wen', basicAuthPwd:'comein22'})
+    const [shareObj,setShareObj] = useState({loginUser: ''})
 
     function setLoginUser(username){
         setShareObj({...shareObj,loginUser: username})
