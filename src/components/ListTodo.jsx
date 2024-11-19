@@ -7,12 +7,11 @@ export default function ListTodo({username}){
     const shareContext = useSahreContext();
     const [userTodos,setUserTodos] = useState([]);
     useEffect(
-        () => getTodoByUser()
+        () => getTodoByUser(),[]
     )
 
     function getTodoByUser(){
          //use share context here
-        
         retrieveTodosByName(shareContext.shareObj.loginUser)
             .then((response)=>handelSuccessResponse(response))
             .catch((response)=>handlerErrorResponse(response))
